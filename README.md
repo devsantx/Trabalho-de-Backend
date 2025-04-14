@@ -1,17 +1,16 @@
 
 ---
 
-# API de Gerenciamento de Pessoas
+# API de Controle de Pessoas
 
-Eduardo Melo — 01706118
+Kauan Alves — 01710611  
+Wesley José — 01709983
 
-Alisson Santos — 01633244
+## 📄 Visão Geral
 
-## 📄 Descrição do Projeto
+Esta aplicação expõe uma API REST voltada ao gerenciamento de pessoas no contexto universitário. O propósito do projeto é colocar em prática os conhecimentos adquiridos em desenvolvimento com Spring Boot e integração com banco de dados MySQL.
 
-Esta aplicação consiste em uma API REST para o sistema de gerenciamento de pessoas de uma universidade. Tem como objetivo aplicar os conhecimentos de desenvolvimento com Spring Boot e persistência de dados com MySQL.
-
-A única entidade do sistema é **Pessoa**, que possui os seguintes atributos:
+O sistema trabalha com uma única entidade, chamada **Pessoa**, composta pelos seguintes atributos:
 
 - nome  
 - cpf  
@@ -19,33 +18,33 @@ A única entidade do sistema é **Pessoa**, que possui os seguintes atributos:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias e Ferramentas
 
 - Java  
-- Spring Boot (Spring Web, Spring Data JPA)  
+- Spring Boot (módulos Spring Web e Spring Data JPA)  
 - MySQL  
 - Lombok  
 - Maven  
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 🗂️ Estrutura de Componentes
 
-O projeto segue a seguinte estrutura:
+A aplicação está organizada nos seguintes módulos:
 
-- **Entity:** Classe `Pessoa`, que representa a tabela no banco de dados.  
-- **DTO:** Classe `PessoaDTO`, para transferência de dados da API.  
-- **Repositório:** Interface `PessoaRepository`, que estende `JpaRepository`.  
-- **Controlador:** Classe `PessoaController`, que expõe os endpoints da API.  
+- **Entidade (Entity):** Classe `Pessoa`, que modela a estrutura da tabela no banco.  
+- **DTO (Data Transfer Object):** Classe `PessoaDTO`, usada para transportar os dados da entidade.  
+- **Repositório:** Interface `PessoaRepository`, que herda de `JpaRepository` para operações no banco.  
+- **Controlador (Controller):** Classe `PessoaController`, onde estão definidos os endpoints da API.  
 
 ---
 
-## 🔗 Endpoints da API
+## 🔗 Rotas da API
 
 - `POST /api/pessoas`  
-  Cria uma nova pessoa no banco de dados.
+  Registra uma nova pessoa na base de dados.
 
 - `GET /api/pessoas/{id}`  
-  Retorna a pessoa com o ID informado.
+  Busca os dados de uma pessoa a partir de seu identificador único.
 
 ---
